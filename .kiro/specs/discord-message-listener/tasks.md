@@ -102,8 +102,8 @@
     - 處理注入失敗的錯誤（顯示原因並建議重試）
     - _Requirements: 4.1, 10.2_
 
-- [ ] 6. 實作 Trading Agent
-  - [ ] 6.1 實作 TradingAgent
+- [x] 6. 實作 Trading Agent
+  - [x] 6.1 實作 TradingAgent
     - 在 `src/trading_agent.py` 中實作 `TradingAgent` 類別
     - 實作 `_build_prompt()` 方法：建構 LLM 分析 prompt，要求回傳 JSON 格式的交易信號
     - 實作 `_parse_response()` 方法：解析 LLM 回應為 TradeSignal，無法解析時回傳 None
@@ -112,8 +112,8 @@
     - 捕獲所有 LLM API 錯誤，記錄後回傳 None
     - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 10.5_
 
-- [ ] 7. 實作交易所下單整合
-  - [~] 7.1 實作 ExchangeClient
+- [x] 7. 實作交易所下單整合
+  - [x] 7.1 實作 ExchangeClient
     - 在 `src/exchange_client.py` 中實作 `ExchangeClient` 類別
     - 實作 `_init_exchanges()` 方法：使用 CCXT 初始化 Binance、Bybit、MEXC 連線
     - 實作 `_check_confidence()` 方法：檢查信心度是否達到閾值
@@ -138,8 +138,8 @@
     - 測試下單失敗不中斷主程式（需求 8.5，使用 mock）
     - _Requirements: 8.1, 8.5_
 
-- [ ] 8. 實作 Batch Launcher 與主程式串接
-  - [~] 8.1 建立 Batch Launcher
+- [x] 8. 實作 Batch Launcher 與主程式串接
+  - [x] 8.1 建立 Batch Launcher
     - 建立 `start_discord.bat`
     - 使用 `tasklist` 檢查 Discord 是否已在執行
     - 若已執行，顯示提示訊息並退出
@@ -147,7 +147,7 @@
     - 顯示 CDP 連線資訊
     - _Requirements: 1.1, 1.2, 1.3_
 
-  - [~] 8.2 實作 ListenerScript 主程式
+  - [x] 8.2 實作 ListenerScript 主程式
     - 在 `src/main.py` 中實作 `ListenerScript` 類別
     - 實作 `start()` 方法：載入設定 → 顯示風險提示 → 連接 CDP → 注入 Observer → 監聽迴圈
     - 實作 `_show_risk_warning()` 方法：顯示 CDP 連接 Discord 的風險提示
@@ -163,7 +163,7 @@
     - 測試 CDP 連線逾時設定為 30 秒（需求 2.4）
     - _Requirements: 2.4, 11.2_
 
-- [ ] 9. 最終 Checkpoint - 確認所有測試通過
+- [x] 9. 最終 Checkpoint - 確認所有測試通過
   - 確認所有測試通過，如有問題請告知。
 
 ## 備註
