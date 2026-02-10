@@ -1,0 +1,7 @@
+playwright
+pyyaml
+ccxt
+hypothesis
+pytest
+pytest-asyncio
+openai
